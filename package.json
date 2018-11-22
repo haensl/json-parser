@@ -4,8 +4,8 @@
   "description": "Minimal JSON file parser for node.js.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "tdd": "mocha --watch",
+    "test": "mocha --recursive \"./{,!(node_modules)/**/}*.spec.js\"",
+    "tdd": "mocha --watch --recursive \"./{,!(node_modules)/**/}*.spec.js\"",
     "lint": "eslint -c ./.eslintrc.json **/*.js",
     "precommit": "npm run lint",
     "prepush": "npm run test"
