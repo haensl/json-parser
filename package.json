@@ -35,12 +35,12 @@
   },
   "homepage": "https://github.com/haensl/json-parser#readme",
   "devDependencies": {
-    "@haensl/eslint-config": "^1.0.0",
+    "@haensl/eslint-config": "^1.3.0",
     "eslint": "^4.19.1",
     "husky": "^0.14.3",
-    "mocha": "^5.0.5"
+    "mocha": "^5.2.0"
   },
   "dependencies": {
-    "@haensl/pfs": "^2.2.0"
+    "@haensl/pfs": "^2.2.2"
   }
 }
