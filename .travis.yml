@@ -1,8 +1,8 @@
 language: node_js
 node_js:
   - 6
-  - lts/*
-  - node
+  - 'lts/*'
+  - 'node'
 
 stages:
   - test
@@ -10,12 +10,13 @@ stages:
     if: branch = master
 
 jobs:
-  - stage: test
-    script: npm test
-  - stage: test
-    script: npm run lint
-  - stage: deploy
-    deploy:
-      provider: npm
-      api_key: $NPM_API_KEY
-      email: $NPM_MAIL
+  include:
+    - stage: test
+      script: npm test
+    - stage: test
+      script: npm run lint
+    - stage: deploy
+      deploy:
+        provider: npm
+        api_key: $NPM_API_KEY
+        email: $NPM_MAIL
