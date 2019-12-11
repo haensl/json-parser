@@ -19,7 +19,7 @@
     "url": "git+https://github.com/haensl/json-parser.git"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=8.3.0"
   },
   "keywords": [
     "JSON",
