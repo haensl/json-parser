@@ -1,14 +1,18 @@
 {
   "name": "@haensl/json-parser",
-  "version": "1.0.2",
-  "description": "Minimal JSON file parser for node.js.",
+  "version": "1.0.3",
+  "description": "Minimal JSON file parser.",
   "main": "index.js",
   "scripts": {
     "test": "mocha --recursive \"./{,!(node_modules)/**/}*.spec.js\"",
     "tdd": "mocha --watch --recursive \"./{,!(node_modules)/**/}*.spec.js\"",
-    "lint": "eslint -c ./.eslintrc.json **/*.js",
-    "precommit": "npm run lint",
-    "prepush": "npm run test"
+    "lint": "eslint -c ./.eslintrc.json **/*.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm test",
+      "pre-push": "npm run lint && npm test"
+    }
   },
   "repository": {
     "type": "git",
@@ -36,9 +40,9 @@
   "homepage": "https://github.com/haensl/json-parser#readme",
   "devDependencies": {
     "@haensl/eslint-config": "^1.3.0",
-    "eslint": "^4.19.1",
-    "husky": "^0.14.3",
-    "mocha": "^5.2.0"
+    "eslint": "^6.7.2",
+    "husky": "^3.1.0",
+    "mocha": "^6.2.2"
   },
   "dependencies": {
     "@haensl/pfs": "^2.2.2"
