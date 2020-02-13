@@ -1,3 +1,8 @@
+## 1.1.0
+* [#7: Overhaul.](https://github.com/haensl/json-parser/issues/7)
+* Migrate to CircleCI.
+* Add proper test and lint setup.
+
 ## 1.0.3
 * [#5: Update dependencies.](https://github.com/haensl/json-parser/issues/5)
 
