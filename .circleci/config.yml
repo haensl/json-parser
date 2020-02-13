@@ -178,7 +178,7 @@ jobs:
             npm pack
             mv haensl-json-parser-${VERSION}.tgz haensl-json-parser.tgz
       - store_artifacts:
-          path: json-parser.tgz
+          path: haensl-json-parser.tgz
       - persist_to_workspace:
           root: ./
           paths:
