@@ -1,3 +1,8 @@
-test/
 *.md
 .*
+**/*.test.js
+rollup.*
+*.log
+*.tgz
+test-results/
+src/

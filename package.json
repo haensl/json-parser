@@ -1,17 +1,23 @@
 {
   "name": "@haensl/json-parser",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Minimal JSON file parser.",
-  "main": "index.js",
+  "main": "lib/json-parser.cjs.js",
+  "unpkg": "lib/json-parser.umd.js",
+  "jsdelivr": "lib/json-parser.umd.js",
   "scripts": {
-    "test": "mocha --recursive \"./{,!(node_modules)/**/}*.spec.js\"",
-    "tdd": "mocha --watch --recursive \"./{,!(node_modules)/**/}*.spec.js\"",
-    "lint": "eslint -c ./.eslintrc.json **/*.js"
+    "build": "npm i && rollup -c",
+    "test": "mocha --recursive src/**/*.test.js",
+    "test:ci": "mocha --recursive --reporter mocha-junit-reporter --reporter-options mochaFile=./test-results/mocha/results.xml src/**/*.test.js",
+    "tdd": "mocha --watch --recursive src/**/*.test.js",
+    "lint": "eslint -c ./.eslintrc.json \"!(lib)/**/*.js\"",
+    "lint:ci": "eslint --format junit -o test-results/eslint/results.xml -c ./.eslintrc.json \"!(lib)/**/*.js\""
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint && npm test",
-      "pre-push": "npm run lint && npm test"
+      "pre-push": "npm run lint && npm test",
+      "post-pull": "npm i"
     }
   },
   "repository": {
@@ -39,12 +45,23 @@
   },
   "homepage": "https://github.com/haensl/json-parser#readme",
   "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
     "@haensl/eslint-config": "^1.3.0",
-    "eslint": "^6.7.2",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "eslint": "^6.8.0",
     "husky": "^3.1.0",
-    "mocha": "^6.2.2"
+    "mocha": "^6.2.2",
+    "mocha-junit-reporter": "^1.23.3",
+    "rollup": "^1.31.0",
+    "rollup-plugin-ascii": "0.0.3",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-terser": "^5.2.0"
   },
   "dependencies": {
-    "@haensl/pfs": "^2.2.2"
+    "@haensl/pfs": "^2.3.1"
   }
 }

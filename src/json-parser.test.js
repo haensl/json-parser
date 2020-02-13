@@ -1,6 +1,6 @@
 const assert = require('assert');
 const path = require('path');
-const parseJSON = require('../');
+const parseJSON = require('./');
 
 describe('json parser', () => {
   describe('when parsing a json file', () => {
@@ -15,7 +15,7 @@ describe('json parser', () => {
             });
         });
 
-        it('should resolve with the parsed json data', () => {
+        it('resolves with the parsed json data', () => {
           assert.ok(config);
         });
       });
@@ -30,7 +30,7 @@ describe('json parser', () => {
             });
         });
 
-        it('should reject with an error', () => {
+        it('rejects with an error', () => {
           assert.ok(error);
         });
       });
@@ -46,7 +46,7 @@ describe('json parser', () => {
           });
       });
 
-      it('should reject with an error', () => {
+      it('rejects with an error', () => {
         assert.ok(error);
       });
     });
