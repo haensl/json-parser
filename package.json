@@ -6,7 +6,7 @@
   "unpkg": "lib/json-parser.umd.js",
   "jsdelivr": "lib/json-parser.umd.js",
   "scripts": {
-    "build": "npm i && rollup -c",
+    "build": "npm i && NODE_ENV=production rollup -c",
     "test": "mocha --recursive src/**/*.test.js",
     "test:ci": "mocha --recursive --reporter mocha-junit-reporter --reporter-options mochaFile=./test-results/mocha/results.xml src/**/*.test.js",
     "tdd": "mocha --watch --recursive src/**/*.test.js",
