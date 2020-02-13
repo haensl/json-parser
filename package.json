@@ -1,6 +1,6 @@
 {
   "name": "@haensl/json-parser",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Minimal JSON file parser.",
   "main": "lib/json-parser.cjs.js",
   "unpkg": "lib/json-parser.umd.js",

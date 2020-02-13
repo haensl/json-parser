@@ -1,3 +1,6 @@
+## 1.1.1
+* Replace TravisCI badge with CircleCI badge.
+
 ## 1.1.0
 * [#7: Overhaul.](https://github.com/haensl/json-parser/issues/7)
 * Migrate to CircleCI.
