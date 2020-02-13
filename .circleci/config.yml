@@ -64,8 +64,7 @@ commands:
           working-directory: /tmp
           name: create test application
           command: |
-            npm init -y
-            ls -la
+            mkdir test-app && npm init -y
 
   bundle-test-setup:
     steps:
@@ -76,7 +75,7 @@ commands:
           name: install module
           working-directory: /tmp/test-app
           command: |
-            npm i -S ~/json-parser/haensl-pfs.tgz
+            npm i -S ~/json-parser/haensl-json-parser.tgz
 
   package-test-setup:
     steps:
@@ -177,7 +176,7 @@ jobs:
           name: generate tarball
           command: |
             npm pack
-            mv haensl-json-parser-${VERSION}.tgz haensl-pfs.tgz
+            mv haensl-json-parser-${VERSION}.tgz haensl-json-parser.tgz
       - store_artifacts:
           path: json-parser.tgz
       - persist_to_workspace:
