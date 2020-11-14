@@ -1,5 +1,5 @@
 const nodeResolve = require('@rollup/plugin-node-resolve');
-const babel = require('rollup-plugin-babel');
+const babel = require('@rollup/plugin-babel').default;
 const commonJS = require('@rollup/plugin-commonjs');
 const external = require('rollup-plugin-peer-deps-external');
 const minify = require('rollup-plugin-terser').terser;
@@ -34,7 +34,7 @@ module.exports = [
           'node_modules/**',
           '**/*.test.js'
         ],
-        runtimeHelpers: true,
+        babelHelpers: 'runtime',
         presets: [
           [
             '@babel/preset-env',
@@ -42,6 +42,9 @@ module.exports = [
               modules: false
             }
           ]
+        ],
+        plugins: [
+          '@babel/plugin-transform-runtime'
         ]
       }),
       commonJS({
@@ -52,6 +55,7 @@ module.exports = [
     ]
   },
   {
+    external: [/@babel\/runtime/],
     input: './src/index.js',
     output: [
       {
@@ -69,12 +73,12 @@ module.exports = [
         includeDependencies: true
       }),
       babel({
+        babelHelpers: 'runtime',
         babelrc: false,
         exclude: [
           'node_modules/**',
           '**/*.test.js'
         ],
-        runtimeHelpers: true,
         presets: [
           [
             '@babel/preset-env',
@@ -85,6 +89,9 @@ module.exports = [
               }
             }
           ]
+        ],
+        plugins: [
+          '@babel/plugin-transform-runtime'
         ]
       }),
       commonJS({

@@ -1,3 +1,7 @@
+## 1.2.0
+* [#11: Update dependencies.](https://github.com/haensl/json-parser/issues/7)
+* Automate Github relase.
+
 ## 1.1.1
 * Replace TravisCI badge with CircleCI badge.
 

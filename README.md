@@ -6,7 +6,7 @@
 
 [![CircleCI](https://circleci.com/gh/haensl/json-parser.svg?style=svg)](https://circleci.com/gh/haensl/json-parser)
 
-Minimal JSON file parser for node.js
+Minimal asynchronous JSON file parser for node.js
 
 ## Installation
 
