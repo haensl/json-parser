@@ -1,5 +1,8 @@
+## 1.2.1
+* [#15: Update dependencies.](https://github.com/haensl/json-parser/issues/16)
+
 ## 1.2.0
-* [#11: Update dependencies.](https://github.com/haensl/json-parser/issues/7)
+* [#11: Update dependencies.](https://github.com/haensl/json-parser/issues/11)
 * Automate Github relase.
 
 ## 1.1.1
