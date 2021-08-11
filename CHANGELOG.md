@@ -1,3 +1,6 @@
+## 1.2.2
+* [#19: Update dependencies.](https://github.com/haensl/json-parser/issues/19)
+
 ## 1.2.1
 * [#15: Update dependencies.](https://github.com/haensl/json-parser/issues/16)
 
