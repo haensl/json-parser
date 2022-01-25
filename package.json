@@ -1,22 +1,18 @@
 {
   "name": "@haensl/json-parser",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Minimal JSON file parser.",
   "main": "lib/json-parser.cjs.js",
   "unpkg": "lib/json-parser.umd.js",
   "jsdelivr": "lib/json-parser.umd.js",
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
+    "prepare": "if [ ${NODE_ENV} != 'production' ]; then husky install; fi",
     "test": "mocha --recursive src/**/*.test.js",
     "test:ci": "mocha --recursive --reporter mocha-junit-reporter --reporter-options mochaFile=./test-results/mocha/results.xml src/**/*.test.js",
     "tdd": "mocha --watch --recursive src/**/*.test.js",
     "lint": "eslint -c ./.eslintrc.json \"!(lib)/**/*.js\"",
     "lint:ci": "eslint --format junit -o test-results/eslint/results.xml -c ./.eslintrc.json \"!(lib)/**/*.js\""
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm test"
-    }
   },
   "repository": {
     "type": "git",
@@ -51,7 +47,7 @@
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "eslint": "^8.5.0",
-    "husky": "^4.3.8",
+    "husky": "^7.0.4",
     "mocha": "^9.0.3",
     "mocha-junit-reporter": "^2.0.0",
     "rollup": "^2.38.4",
