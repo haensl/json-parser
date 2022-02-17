@@ -1,6 +1,6 @@
 {
   "name": "@haensl/json-parser",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Minimal JSON file parser.",
   "main": "lib/json-parser.cjs.js",
   "unpkg": "lib/json-parser.umd.js",
@@ -33,6 +33,7 @@
     "twitter": "@h_p_d",
     "url": "https://hpdietz.com"
   },
+  "funding": "https://github.com/sponsors/haensl",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/haensl/json-parser/issues"
