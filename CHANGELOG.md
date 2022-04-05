@@ -1,3 +1,6 @@
+## 1.2.6
+* [#27: Update dependencies.](https://github.com/haensl/json-parser/issues/27)
+
 ## 1.2.5
 * [#25: Add funding information.](https://github.com/haensl/json-parser/issues/25)
 * Update dependencies.
