@@ -2,7 +2,7 @@ const nodeResolve = require('@rollup/plugin-node-resolve').default;
 const babel = require('@rollup/plugin-babel').default;
 const commonJS = require('@rollup/plugin-commonjs');
 const external = require('rollup-plugin-peer-deps-external');
-const minify = require('rollup-plugin-terser').terser;
+const minify = require('@rollup/plugin-terser');
 const pkg = require('./package');
 
 const globals = {
